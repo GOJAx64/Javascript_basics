@@ -67,11 +67,65 @@ class Vector {
     }
 }
 
-let point = new Vector(2,2);
+/*let point = new Vector(2,2);
 console.log(point.more([2,2]));
-console.log(point.longitud);
+console.log(point.longitud);*/
 
 
 class Set {
-    
+    constructor() {
+        this.items = [];
+    }
+
+    add(item){
+        if(!this.has(item)) {
+            this.items.push(item);
+        }
+    }
+
+    delete(item) {
+        let index = this.items.indexOf(item);
+        
+        if(index != -1) {
+            this.items.splice(index,1);
+        }
+    }
+
+    has(item) {
+        let index = this.items.indexOf(item);
+
+        if(index != -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    toString() {
+        return this.items.toString();
+    }
+
+    from() {
+        let iterator = this.items[Symbol.iterator]();
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+    }
 }
+
+let mySet = new Set();
+mySet.add(1);
+mySet.add(2);
+mySet.add(3);
+mySet.add(4);
+mySet.add(4);
+mySet.add(1);
+console.log(mySet.toString());
+mySet.delete(5);
+mySet.delete(1);
+console.log(mySet.toString());
+mySet.from();
+console.log(mySet.has(1));
+console.log(mySet.has(2));
+console.log(mySet.has(5));
