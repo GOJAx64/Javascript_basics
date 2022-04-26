@@ -1,7 +1,3 @@
-// alert("Hola");
-//console.log(typeof 4.5) // → number 
-//console.log(typeof "x") // → string
-
 //Cycle of a triangle
 let myString = '#';
 
