@@ -14,4 +14,7 @@ console.log(typeof variable); // → object by (null)
 
 //NaN = Not a  Number, when we make operations between diferents types of variables
 variable = "hello" * 3.3;
-console.log(variable); // → null 
+console.log(variable); // → NaN
+
+variable = {};
+console.log(typeof variable)// → object

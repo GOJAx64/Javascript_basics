@@ -1,13 +1,14 @@
 //Strict mode
-/*function puedesDetectarElProblema() {
+console.log("******* use strict *******");
+function puedesDetectarElProblema() {
     "use strict";
     for (let contador = 0; contador < 10; contador++) { // <- Contador is not defined
         console.log("Feliz feliz"); 
     }
-}
-    
+}  
 puedesDetectarElProblema();
 
+console.log("\n\n******* try-catch-finally *******");
 function pedirDireccion(pregunta) {
     //let resultado = prompt(pregunta);  <- prompt is not defined
     if (resultado.toLowerCase() == "izquierda") return "I"; 
@@ -27,25 +28,12 @@ try {
     console.log("Tu ves", mirar());
 } catch (error) {
     console.log("Algo incorrecto sucedio: " + error);
+} finally {
+    console.log("Nos vemos vaquero del espacio");
 }
-
-function transferir(desde, cantidad) {
-    if (cuentas[desde] < cantidad) return;
-    let progreso = 0;
-    try {
-        cuentas[desde] -= cantidad;
-        progreso = 1;
-        cuentas[obtenerCuenta()] += cantidad;
-        progreso = 2;
-    } finally {
-        if (progreso == 1) {
-            cuentas[desde] += cantidad;
-        }
-    } 
-}
-*/
 
 //retry
+console.log("\n\n******* Retry exercise *******");
 function multiplication(x, y) {
     if (Math.random() < 0.21) {
         return x * y;
@@ -53,7 +41,6 @@ function multiplication(x, y) {
         throw new TypeError("MultiplierUnitFailure");
     }
 }
-
 
 while(true) {
     try {
@@ -63,19 +50,3 @@ while(true) {
         console.log(error.message);
     }
 }
-
-/*const caja = {
-    bloqueada: true,
-    desbloquear() { this.bloqueada = false; },
-    bloquear() { this.bloqueada = true;  },
-    _contenido: [],
-    get contenido() {
-        if (this.bloqueada) throw new Error("Bloqueada!");
-        return this._contenido;
-    }
- };
-
- function */
-
-    
-

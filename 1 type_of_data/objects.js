@@ -10,7 +10,26 @@ let killerRabbit = Object.create(prototypeRabbit);
 killerRabbit.type = "killer"; 
 killerRabbit.talk("SKREEEE!");
 
+const myObject = {
+    name: 'object',
+    count: 1,
+    greets() {
+        console.log("Hello");
+    },
+    sayYourName() {
+        console.log(`Hello my name is ${this.name}`);
+    }
+}
 
+console.log(myObject.name);
+console.log(myObject['count']);
+myObject.greets();
+myObject.sayYourName();
+console.log(Object.keys(myObject));
+console.log(Object.values(myObject));
+console.log(myObject.hasOwnProperty('name'));
+console.log(myObject.hasOwnProperty('nombre'));
+console.log(`\n\n *******Exercises*****`);
 //Classes
 class Rabbit {
     constructor(type) {
