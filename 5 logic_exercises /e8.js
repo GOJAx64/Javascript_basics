@@ -3,20 +3,36 @@ con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente
 y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá 
 { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.*/
 
+const sortArrays = numbers => {
+  return {
+    asc: numbers.map(item => item).sort(),
+    desc: numbers.map(item => item).sort().reverse()
+  }
+}
+
+console.log('Exercise 24');
+
+let arrays = sortArrays([7,5,7,8,6]);
+console.log(`Ascending sort: ${arrays.asc} and Descending sort: ${arrays.desc}`)
+
 
 /*25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. 
 miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].*/
 
+const deleteDuplicates = items =>  Array.from(new Set(items)) 
+console.log('\nExercise 25');
+console.log(deleteDuplicates(["x", 10, "x", 2, "10", 10, true, true]));
 
 /*26) Programa una función que dado un arreglo de números obtenga el promedio, 
 pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.*/
 
 const average = numbers => {
     let sum = 0;
-    numbers.forEach(element => { sum += element; });
+    numbers.forEach(element => sum += element);
     return sum / numbers.length;
 }
 
+console.log('\nExercise 26');
 console.log(average([9,8,7,6,5,4,3,2,1,0]));
 
 /* 27) Programa una clase llamada Pelicula.
